@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>div.</title>
+	
+	<link rel="stylesheet" href="styles.css"> 
+	<script src="https://kit.fontawesome.com/f7846c4ecd.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+    <!-- HEADER -->
+		<div id="header">
+			<nav>
+				<h2 class="title-link">Div.<span>yesh</span></h2>
+			</nav>
+
+			<div class="header-text">
+				<p>Frontend Developer</p>
+				<h1>Hi, I'm <span> Divyesh </span> <br> from India</h1>
+			</div>
+		</div>
+    <!-- END OF HEADER -->
+
+    <!-- ABOUT -->
+		<div id="about">
+			<div class="row">
+				<h1 class="about-title">About me</h1>
+				<p class="about">I am currently doing my undergraduation at VIT, Vellore. I am doing my B.Tech in Computer Science Engineering with specialisation in Information Security. I am a tech savvy. I have been into coding for more than 3 years now.</p>
+				
+				<div class="tab-titles">
+					<p class="tab-links"><a>Skills</a></p>
+				</div>
+
+				<div class="tab-contents" id="skills" > <!-- This is for skill, do similarly for education and experience -->
+						<div class="skill-titles">
+							<div>
+								<i class="fa-solid fa-code"></i>
+								<br>
+								<h2>Frontend<h2>
+								<ul class="skill-title-list">
+									<li>HTML</li>
+									<li>CSS</li>
+									<li>Javascript</li>
+									<li>React.js</li>
+								</ul>
+							</div>
+							<div>
+								<i class="fa-brands fa-python"></i>
+								<br>
+								<h2>Python<h2>
+								<ul class="skill-title-list">
+									<li>NumPy</li>
+									<li>Pandas</li>
+								</ul>
+							</div>
+							<div>
+								<i class="fa-duotone fa-c"></i>
+								<br>
+								<h2>C++<h2>
+								<ul class="skill-title-list">
+									<li>Object Oriented Programming</li>
+									<li>Data Structures and Algorithms</li>
+								</ul>
+							</div>
+						</div>	
+				</div>
+			</div>
+		</div>
+		<!-- END OF ABOUT--->
+
+		<!-- CONTACT -->
+		<div id="conact">
+			<div class="row">
+				<div class="contact-right">
+					<h1 class="sub-text">Contact</h1>
+					<!-- <p class="mail-icon-text">divyeshguhan@gmail.com</p> -->
+					<form name='submit-to-google-sheet'>
+						<input type="text" name="Name" placeholder="Your name" required>
+						<input type="email" name="Mail" placeholder="Your mail" required>
+						<textarea name="Message" rows="6" placeholder="Your message"></textarea>
+						<button type="submit" class="btn btn2">Submit</button> 
+					</form>
+				</div>
+				<div class="contact-left">
+					<div class="social-icons">
+						<a href="https://www.linkedin.com/in/divyesh-shivakumar-44b84a21b/"><i class="fa-brands fa-linkedin"></i></a>
+						<a href="https://github.com/Divvyeshhh"><i class="fa-brands fa-square-github"></i></a>
+						<a href="https://www.instagram.com/divvyeshhh/"><i class="fa-brands fa-square-instagram"></i></a>
+					</div>
+				</div>
+			</div>	
+			<div class="copyright">
+				<p>Copyright   <i class="fa-solid fa-copyright"></i>   divvyeshhh/.</p>
+			</div>
+		</div>
+	</div>
+	<script>
+	  	const scriptURL = 'https://script.google.com/macros/s/AKfycbzoKMSlMdeQ_rL_PUtkp-ydfbhrE41xsddyPJ8qHJFXX5fKSrSzPHWdp0o3LqdLMWEA/exec'
+	    const form = document.forms['submit-to-google-sheet']
+	  
+	    form.addEventListener('submit', e => {
+	      e.preventDefault()
+	      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+	        .then(response => console.log('Success!', response))
+	        .catch(error => console.error('Error!', error.message))
+	    })
+	  </script>
+</body>
+</html>
